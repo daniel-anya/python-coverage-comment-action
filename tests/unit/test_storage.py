@@ -253,6 +253,9 @@ def test_get_repo_file_url__no_path(github_host):
 )
 def test_get_html_report_url(github_host, use_gh_pages_html_url, expected):
     result = storage.get_html_report_url(
-        github_host=github_host, repository="foo/bar", branch="baz", use_gh_pages_html_url=use_gh_pages_html_url
+        github_host=github_host,
+        repository="foo/bar",
+        branch="baz",
+        use_gh_pages_html_url=use_gh_pages_html_url,
     )
     assert result == expected
